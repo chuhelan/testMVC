@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./dist/bundle.js"></script>
+</head>
+
+<body>
+
+    <!-- banner - start -->
+    <div
+        class="relative flex flex-wrap bg-indigo-500 px-4 py-3 sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+        <div
+            class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-white sm:order-none sm:mb-0 sm:w-auto md:text-base">
+            Copyright © CZ04221201305 万铭鹏
+        </div>
+    </div>
+    <!-- banner - end -->
+
+    <!-- component -->
+    <div class="app bg-gray-100">
+
+        <nav class="bg-white w-full flex relative shadow justify-between items-center px-8 h-20">
+
+            <div class="flex">
+                <span class="text-lg font-bold text-gray-900">欢迎回来：</span>
+                <span class="text-lg font-semibold text-blue-600/100" id="home_top_userCode">CZ04221200000</span>
+                <span>&nbsp;</span>
+                <span class="text-lg font-semibold text-blue-600/100" id="home_top_RealName">我是作者</span>
+            </div>
+
+
+
+            <!--signout-->
+            <button id="home_signout_button"
+                class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span
+                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    退出帐号
+                </span>
+            </button>
+            <!--signout-->
+
+        </nav>
+
+        <main class="grid gap-6 my-12 w-2xl container px-2 mx-auto">
+            <div class="bg-white shadow rounded-lg p-10">
+                <div class="flex justify-between mb-6">
+                    <h6 class="text-blueGray-700 text-xl font-bold">个人信息</h6>
+                </div>
+
+                <form target="update_account_btn">
+
+                    <div class="grid gap-6 mb-6 lg:grid-cols-2">
+                        <div>
+                            <label for="home_userCode"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                *学号</label>
+                            <input type="text" id="home_userCode" disabled
+                                class="disabled-input cursor-not-allowed bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="CZ00000000000">
+                        </div>
+                        <div>
+                            <label for="home_RealName"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">姓名</label>
+                            <input type="text" id="home_RealName"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="姓名">
+                        </div>
+                        <div>
+                            <label for="home_Email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">*邮箱</label>
+                            <input id="home_Email" disabled
+                                class="disabled-input cursor-not-allowed bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="example@example.com">
+                        </div>
+                        <div>
+                            <label for="home_sex"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">性别</label>
+                            <!-- <input id="home_sex"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"> -->
+
+                            <!-- component -->
+                            <!-- entire page -->
+                            <main class="flex items-center justify-center">
+                                <!-- tabs -->
+                                <div class="grid w-[40rem] grid-cols-2 space-x-2 rounded-xl bg-gray-200" x-data="app">
+                                    <div>
+                                        <input type="radio" name="option" id="home_nan_input" class="peer hidden" />
+                                        <label for="home_nan_input"
+                                            class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">
+                                            男
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="option" id="home_nv_input" class="peer hidden" />
+                                        <label for="home_nv_input"
+                                            class="block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">
+                                            女
+                                        </label>
+                                    </div>
+                                </div>
+                            </main>
+
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between h-5 mt-10">
+
+
+                        <div class="flex">
+                            <div class="flex items-center h-5">
+                                <input id="home_account_check" aria-describedby="helper-checkbox-text" type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            </div>
+                            <div class="ml-2 text-sm">
+                                <label for="home_account_check" class="font-medium text-gray-900 dark:text-gray-300">
+                                    我确认信息准确无误
+                                </label>
+                                <p id="helper-checkbox-text"
+                                    class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                    *&nbsp;学号和邮箱作为登录依据，暂时还不支持修改。如需修改，请联系管理员。
+                                </p>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="home_update_account_button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            提交
+                        </button>
+                        <iframe name="update_account_btn" style="display: none;"></iframe>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white shadow rounded-lg p-10">
+
+                <div class="flex justify-between mb-6">
+                    <h6 class="text-blueGray-700 text-xl font-bold">修改密码</h6>
+                </div>
+
+                <div class="mb-6">
+                    <label for="password"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">输入新的密码</label>
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="•••••••••" required="">
+                </div>
+                <div class="mb-6">
+                    <label for="confirm_password"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">确认密码</label>
+                    <input type="password" id="confirm_password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="•••••••••" required="">
+                </div>
+
+                <div class="flex items-center justify-between h-5 mt-10 ">
+
+                    <div class="flex">
+                        <div class="flex items-center h-5">
+                            <input id="password_checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value=""
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        <div class="ml-2 text-sm">
+                            <label for="password_checkbox" class="font-medium text-gray-900 dark:text-gray-300">
+                                我确定修改密码
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="update_accountPassword_button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">提交</button>
+                </div>
+
+
+            </div>
+
+            <div class="bg-white shadow rounded-lg p-10">
+
+                <div class="flex justify-between mb-6">
+                    <h6 class="text-red-600 text-xl font-bold">删除账户</h6>
+                </div>
+
+                <div class="p-4 mb-4 text-sm text-red-900 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-600">
+                    <span class="font-medium">不可逆操作！</span> 帐号删除后不能恢复！
+                </div>
+
+                <div class="flex items-center justify-between h-5 mt-8 ">
+
+                    <div class="flex items-center">
+                        <input id="home_delete_account_check" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="home_delete_account_check"
+                            class="ml-2 text-sm font-blod text-gray-900 dark:text-gray-300">
+                            我知道我在干什么！
+                        </label>
+                    </div>
+
+                    <button type="button" id="home_delete_account_button"
+                        class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        确定删除
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </main>
+        <div class="bg-white">
+            <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+                <div class="flex flex-col items-center justify-between gap-4 border-b py-6 md:flex-row">
+                    <!-- nav - start -->
+                    <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
+                        <a href="https://github.com/chuhelan" target="_blank"
+                            class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">关于</a>
+                        <a href="https://chuhelan.com" target="_blank"
+                            class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">个人博客</a>
+                    </nav>
+                    <!-- nav - end -->
+
+                    <!-- social - start -->
+                    <div class="flex gap-4">
+                        <a href="https://github.com/chuhelan" target="_blank"
+                            class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                            <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- social - end -->
+                </div>
+
+                <div class="py-8 text-center text-sm text-gray-400">© 2023 - Present MingPeng Wan. All rights reserved.
+                </div>
+            </footer>
+        </div>
+
+</body>
+
+</html>

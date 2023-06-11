@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <title>用户注册页面</title>
+    <script src="./dist/bundle.js"></script>
+</head>
+<body>
+
+<div class="bg-white pt-6 sm:pt-8 lg:pt-12">
+    <!-- banner - start -->
+    <div class="mx-auto max-w-screen-2xl px-4 pb-4 md:px-8">
+        <div class="relative flex flex-wrap rounded-lg bg-indigo-500 px-4 py-3 shadow-lg sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+            <div class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-white sm:order-none sm:mb-0 sm:w-auto md:text-base">
+                Copyright © CZ04221201305 万铭鹏
+            </div>
+        </div>
+    </div>
+    <!-- banner - end -->
+</div>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">注册用户</h2>
+
+        <form class="mx-auto max-w-lg rounded-lg border" target="iframe_id">
+            <div class="flex flex-col gap-4 p-4 md:p-8">
+
+                <div>
+                    <label for="register_userCode" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">学号</label>
+                    <input name="userCode" id="register_userCode"
+                           class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"/>
+                </div>
+
+                <div>
+                    <label for="register_password" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">密码</label>
+                    <input name="password" type="password" id="register_password"
+                           class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"/>
+                </div>
+
+                <div>
+                    <label for="register_password_rep" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">确认密码</label>
+                    <input name="password" type="password" id="register_password_rep"
+                           class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"/>
+                </div>
+
+                <div>
+                    <label for="register_realName" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">真实姓名</label>
+                    <input name="register_realName" id="register_realName"
+                           class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"/>
+                </div>
+
+                <div>
+                    <label for="register_email" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">电子邮件</label>
+                    <input name="email" id="register_email"
+                           class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"/>
+                </div>
+
+                <div>
+                    <label class="mb-2 inline-block text-sm text-gray-800 sm:text-base">性别</label>
+                    <ul class="grid w-full gap-6 md:grid-cols-2">
+                        <li>
+                            <input type="radio" id="register_radio" value="男" name="sex" checked="true"
+                                   class="hidden peer" required>
+                            <label for="register_radio"
+                                   class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <div class="block">
+                                    <div class="w-full text-lg font-semibold">男</div>
+                                </div>
+                                <svg t="1686224990596" class="w-6 h-6 ml-3" viewBox="0 0 1024 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="6953" width="200" height="200">
+                                    <path d="M641.536 221.696c0-68.608-55.808-124.416-124.416-124.416S392.192 153.088 392.192 221.696s55.808 124.416 124.416 124.416 124.928-55.808 124.928-124.416z"
+                                          fill="#363f4d" p-id="6954"></path>
+                                    <path d="M452.096 356.352c-90.624 28.672-149.504 116.224-149.504 210.944v150.528c0 7.168 6.144 13.312 13.312 13.312h72.192v181.76c0 6.144 5.12 11.264 11.264 11.264h235.008c6.144 0 11.264-5.12 11.264-11.264v-181.76H701.44c16.384 0 29.696-13.312 29.696-29.696v-146.944c0.512-136.192-140.288-242.176-279.04-198.144z"
+                                          fill="#363f4d" p-id="6955"></path>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="register_radio2" name="sex" value="女" class="hidden peer">
+                            <label for="register_radio2"
+                                   class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <div class="block">
+                                    <div class="w-full text-lg font-semibold">女</div>
+                                </div>
+                                <svg t="1686225025509" class="w-6 h-6 ml-3"  viewBox="0 0 1024 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="7100" width="200" height="200">
+                                    <path d="M647.68 263.168c0-68.608-55.808-124.416-124.416-124.416S398.848 194.56 398.848 263.168s55.808 124.416 124.416 124.416 124.416-55.808 124.416-124.416zM721.92 751.616l-62.976-247.296c-13.824-67.584-74.24-116.224-143.36-116.224s-130.048 48.64-143.36 113.664l-63.488 249.856c-3.072 12.288-0.512 25.088 7.168 35.328s19.456 15.872 32.256 16.384c0 0 30.72 0.512 55.296 1.024 7.68 23.552 19.456 58.368 30.208 91.648 5.12 16.896 20.992 28.16 38.912 28.16H558.08c17.408 0 33.28-11.264 38.4-28.16 10.752-33.792 22.528-69.12 30.208-92.672 24.576 0 55.296-0.512 55.296-0.512 12.8-0.512 24.576-6.144 32.256-15.872 7.68-10.24 10.752-23.04 7.68-35.328z"
+                                          fill="#363f4d" p-id="7101"></path>
+                                </svg>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <button id="reg_button" class="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-gray-300 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">
+                    注&nbsp;册
+                </button>
+
+            </div>
+
+            <div class="flex items-center justify-center bg-gray-100 p-4">
+                <p class="text-center text-sm text-gray-500">已经有账户了?
+                    <a href="login.html"
+                       class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">登录</a>
+                </p>
+            </div>
+        </form>
+        <iframe name="iframe_id" style="display: none;"></iframe>
+    </div>
+</div>
+
+<div class="bg-white pt-4 sm:pt-10 lg:pt-12">
+    <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div class="flex flex-col items-center justify-between gap-4 border-t border-b py-6 md:flex-row">
+            <!-- nav - start -->
+            <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
+                <a href="https://github.com/chuhelan" target="_blank"
+                   class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">关于</a>
+                <a href="https://chuhelan.com" target="_blank"
+                   class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">个人博客</a>
+            </nav>
+            <!-- nav - end -->
+
+            <!-- social - start -->
+            <div class="flex gap-4">
+                <a href="https://github.com/chuhelan" target="_blank"
+                   class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                    <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+            <!-- social - end -->
+        </div>
+
+        <div class="py-8 text-center text-sm text-gray-400">© 2023 - Present MingPeng Wan. All rights reserved.</div>
+    </footer>
+</div>
+</body>
+</html>

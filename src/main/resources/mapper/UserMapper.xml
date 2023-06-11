@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chuhelan.dao.UserDao">
+
+    <insert id="register_user">
+        insert into t_user (userCode, password, RealName, Email, sex)
+        values (#{userCode}, #{password}, #{RealName}, #{Email}, #{sex})
+    </insert>
+
+    <update id="update_token_by_email">
+        update t_user
+        set session    = #{session},
+            sessionDie = #{sessionDie}
+        where Email = #{Email}
+    </update>
+
+    <update id="update_user_by_userCode">
+        update t_user
+        set RealName = #{RealName},
+            sex      = #{sex}
+        where userCode = #{userCode}
+    </update>
+
+    <update id="update_userPassowrd_by_userCode">
+        update t_user
+        set password = #{password}
+        where userCode = #{userCode}
+    </update>
+
+    <delete id="delete_user_by_userCode">
+        delete
+        from t_user
+        where userCode = #{userCode}
+    </delete>
+
+    <select id="select_user_by_userCode" resultType="com.chuhelan.beans.User">
+        select *
+        from t_user
+        where userCode = #{userCode}
+    </select>
+
+    <select id="select_user_by_userCodeKey" resultType="com.chuhelan.beans.User">
+        select *
+        from t_user
+        where userCode = #{userCode}
+          and password = #{password}
+    </select>
+
+    <select id="select_user_by_email" resultType="com.chuhelan.beans.User">
+        select *
+        from t_user
+        where Email = #{Email}
+          and password = #{password}
+    </select>
+
+    <select id="select_userCode_by_Email" resultType="java.lang.String">
+        select userCode
+        from t_user
+        where Email = #{Email}
+    </select>
+
+
+</mapper>

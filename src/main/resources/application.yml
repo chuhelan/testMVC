@@ -1,0 +1,30 @@
+server:
+  port: 2731
+spring:
+  mail:
+    host: smtp.exmail.qq.com
+    username: service@chuhelan.com
+    password:
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  datasource:
+    # 数据源基本配置
+    username: test_
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://chuhelan.com:3306/test_?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: utf-8
+    servlet:
+      content-type: text/html
+    cache: false
+mybatis:
+  type-aliases-package: com.chuhelan.beans
+  mapper-locations: [ classpath:mapper/**/*.xml ]
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
